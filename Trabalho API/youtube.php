@@ -1,7 +1,7 @@
 <?php
     $search = isset($_POST['search']) ? $_POST['search'] : '';
 
-    $maxResults = isset($_POST['maxResults']) ? $_POST['maxResults'] : '';
+    $maxResults = isset($_POST['maxResults']) ? $_POST['maxResults'] : '15';
 
 
     // Key da API gerada no site developers.google.com
