@@ -10,18 +10,21 @@ include_once('youtube.php');
         <title>Consumindo API</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" src="css/style.css">
     </head>
-    <body>
-        <div class="container">
-            <div class="mx-auto card">
+    <body class="bg-danger">
+        <div class="container bg-white p-3">
+            <header class="mb-3 ml-3">
+                <a href="index.php"><img src="img/logo.png" alt="Logo MineTube"></a>    
+            </header>
+            <article class="mx-auto">
                 <div class="row">               
                     <div class="col-md-12">
-                        <h1 class="text-center my-3">Mine YouTube</h1>
                         <form name="frmYoutube" method="post" action="index.php" class="mx-5">
                             <div class="input-group">
                                 <input type="text" placeholder="Pesquisar" class="form-control" name="search" value="" autocomplete="off">                     
                                 <div class="input-group-append">
-                                    <input type="submit" value="Pesquisar" class="btn btn-outline-dark">
+                                    <input type="submit" value="Pesquisar" class="btn btn-outline-danger">
                                     <input type="number" id="maxResults" class="form-control" name="maxResults" min="1" max="50" step="1" value="15">                             
                                 </div>
                             </div>
@@ -33,7 +36,7 @@ include_once('youtube.php');
                         <?=exibirVideos($videos)?>
                     </div>
                 </div>
-            </div>
+            </<article>
         </div>
     </body>
 </html>
