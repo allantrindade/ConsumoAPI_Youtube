@@ -1,11 +1,11 @@
 <?php
-    $search = isset($_POST['search']) ? $_POST['search'] : '';
+    $search = isset($_POST['search']) ? $_POST['search'] : 'Fatec';
 
     $maxResults = isset($_POST['maxResults']) ? $_POST['maxResults'] : '15';
 
 
     // Key da API gerada no site developers.google.com
-    $keyAPI = "AIzaSyDeUoN9GWfvAaKxsYTAYgPKjeUzIHF_kHs";
+    $keyAPI = "AIzaSyA2tNWECbsOqXC-p6I_LAyQzXjd6aMosi8";
 
     $type = "&type=video&part=snippet&maxResults={$maxResults}&q=" . removerEspacos($search);
 
@@ -13,16 +13,32 @@
 
     $videos = json_decode(file_get_contents($url));
 
-     echo $url;
+    // echo $url;
 
     function exibirVideos(object $videos) {
         $link = '';
         foreach ($videos->items as $video) {
             $link .= "
-            <h3 class='mt-4'>{$video->snippet->title}</h3>        
-            <div class='embed-responsive embed-responsive-4by3'>
+            
+            <div class='embed-responsive embed-responsive-4by3 mt-4'>
                 <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/{$video->id->videoId}' allowfullscreen></iframe>
-            </div>";
+            </div>
+            ";
+        }       
+        return $link;         
+    }
+
+    function exibirDescricao(object $videos) {
+        $link = '';
+        foreach ($videos->items as $video) {
+            $link .= "
+            <div class ='embed-responsive embed-responsive-16by9'>
+            <div class ='embed-responsive-item mt-5'>
+            <h4 class='h4'>{$video->snippet->title}</h4>   
+            <p class='lead'>{$video->snippet->description}</p>
+            </div>
+            </div>
+            ";
         }       
         return $link;         
     }

@@ -10,10 +10,11 @@ include_once('youtube.php');
         <title>Consumindo API</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" src="css/style.css">
+        <link href="css/style.css" rel="stylesheet">
+        
     </head>
     <body class="bg-danger">
-        <div class="container bg-white p-3">
+        <div class="container bg-light p-3">
             <header class="mb-3 ml-3">
                 <a href="index.php"><img src="img/logo.png" alt="Logo MineTube"></a>    
             </header>
@@ -31,9 +32,12 @@ include_once('youtube.php');
                         </form>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-5 ml-3">
+                <div class="row p-3">
+                    <div class="col-5">
                         <?=exibirVideos($videos)?>
+                    </div>
+                    <div class="col-7 p-3">
+                        <?=exibirDescricao($videos)?>
                     </div>
                 </div>
             </<article>
