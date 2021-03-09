@@ -1,0 +1,39 @@
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+    h4 {
+        font-size: 0.8em;
+    }
+    .fontRezise {
+        font-size: 0.6em;
+    }
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+    h4 {
+        font-size: 1.2em;
+    }
+    .fontRezise {
+        font-size: 0.9em;
+    }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    h4 {
+        font-size: 1.4em;
+    }
+    .fontRezise {
+        font-size: 1.1em;
+    }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    h4 {
+        font-size: 1.6em;
+    }
+    .fontRezise {
+        font-size: 1.3em;
+    }
+}

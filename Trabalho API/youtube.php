@@ -34,8 +34,8 @@
             $link .= "
             <div class ='embed-responsive embed-responsive-16by9'>
             <div class ='embed-responsive-item mt-5'>
-            <h4 class='h4'>{$video->snippet->title}</h4>   
-            <p class='lead'>{$video->snippet->description}</p>
+            <h4>{$video->snippet->title}</h4>   
+            <p class='lead fontRezise'>{$video->snippet->description}</p>
             </div>
             </div>
             ";
