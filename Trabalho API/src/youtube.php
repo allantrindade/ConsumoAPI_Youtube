@@ -1,15 +1,18 @@
 <?php
-    $search = isset($_POST['search']) ? $_POST['search'] : 'Fatec';
+    include('src/config.php');
+
+    $search = isset($_POST['search']) ? removerEspacos($_POST['search']) : 'Fatec';
 
     $maxResults = isset($_POST['maxResults']) ? $_POST['maxResults'] : '15';
 
-
     // Key da API gerada no site developers.google.com
-    $keyAPI = "AIzaSyA2tNWECbsOqXC-p6I_LAyQzXjd6aMosi8";
+    $keyAPI = KEY;
 
-    $type = "&type=video&part=snippet&maxResults={$maxResults}&q=" . removerEspacos($search);
+    $type = "&type=video&part=snippet&maxResults={$maxResults}";
 
-    $url = "https://www.googleapis.com/youtube/v3/search?key={$keyAPI}{$type}";
+    $searching = "&q={$search}";
+
+    $url = "https://www.googleapis.com/youtube/v3/search?key={$keyAPI}{$type}{$searching}";
 
     $videos = json_decode(file_get_contents($url));
 
