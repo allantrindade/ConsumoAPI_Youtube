@@ -26,7 +26,7 @@ include_once('src/youtube.php');
                                 <input type="text" placeholder="Pesquisar" class="form-control" name="search" value="" autocomplete="off">                     
                                 <div class="input-group-append">
                                     <input type="submit" value="Pesquisar" class="btn btn-outline-danger">
-                                    <input type="number" id="maxResults" class="form-control" name="maxResults" min="1" max="50" step="1" value="15">                             
+                                    <input type="number" id="maxResults" class="form-control" name="maxResults" min="1" max="20" step="1" value="15">                             
                                 </div>
                             </div>
                         </form>
