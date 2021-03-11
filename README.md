@@ -26,4 +26,4 @@ Este documento é destinado a desenvolvedores que desejam criar aplicativos que 
   
 5. Após essas configurações você ja pode consumir a API do Youtube através desse projeto MineTube.
   
-  * Qual dúvida acesse o site offical da [API Youtube](https://developers.google.com/youtube/v3/getting-started).
+  * Qualquer dúvida acesse o site offical da [API Youtube](https://developers.google.com/youtube/v3/getting-started).

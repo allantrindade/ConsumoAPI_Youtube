@@ -16,13 +16,10 @@
 
     $videos = json_decode(file_get_contents($url));
 
-    // echo $url;
-
     function exibirVideos(object $videos) {
         $link = '';
         foreach ($videos->items as $video) {
-            $link .= "
-            
+            $link .= "       
             <div class='embed-responsive embed-responsive-4by3 mt-4'>
                 <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/{$video->id->videoId}' allowfullscreen></iframe>
             </div>
@@ -57,81 +54,6 @@
     function removerEspacos(String $string){
         return preg_replace('/[ -]+/','_',$string);
     }
-
-
-    // echo '<pre>';
-    // print_r($videos->items[0]);
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // function getAdress () {
-    //     $address = (object) [
-    //         'cep' => '',
-    //         'logradouro' => '',
-    //         'bairro' => '',
-    //         'localidade' => '',
-    //         'uf' => ''
-    //     ];
-        
-    //     if (isset($_POST['cep'])) {
-    //         $cep = $_POST['cep'];
-
-    //         $cep = filterCep($cep);
-
-    //         if (isCep($cep)) {
-    //             $address = getAdressViaCep($cep);
-    //             if (property_exists($address, 'erro')){
-    //                 $address = addressEmpty();
-    //                 $address->cep = 'CEP Não Encontrado!';
-    //             }
-    //         } else {
-    //             $address = addressEmpty();
-    //             $address->cep = 'CEP Inválido!';
-    //         }
-    //     } else {
-    //         $address = addressEmpty();
-    //     }
-    //     return $address;
-    // }
-
-
-    // function getAdressViaCep (String $cep){
-    //     $url = "https://viacep.com.br/ws/{$cep}/json/";
-    //     return json_decode(file_get_contents($url));
-    // }
-
-    // function isCep(String $cep):bool {
-    //     return preg_match('/^[0-9]{5}-?[0-9]{3}$/', $cep);
-    // }
-    
-    // function filterCep(String $cep):String {
-    //     return preg_replace('/[^0-9]/', '', $cep);
-    // }
-
-    // function addressEmpty() {
-    //     return (object) [
-    //         'cep' => '',
-    //         'logradouro' => '',
-    //         'bairro' => '',
-    //         'localidade' => '',
-    //         'uf' => ''
-    //     ];
-    // }
 
 ?>
 
